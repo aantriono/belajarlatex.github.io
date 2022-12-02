@@ -1,0 +1,535 @@
+\documentclass[a5paper,10pt,openany]{book}
+\title{\vspace{-15mm}\bfseries BILANGAN BULAT}
+\author{Modul Ajar untuk Siswa Kelas VII SMP/MTs\\ 120 Menit\\[9mm]\small\textbf{Aan Triono, S.Pd.}\\[-2mm]\small SMPN Purworejo\\[-2mm]\small2021 }
+
+\date{}
+\usepackage{fontawesome}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{avant}
+\usepackage{fouriernc,sourceserifpro}
+%\usepackage{fouriernc,sourceserifpro}
+\usepackage[indonesian]{babel}
+\usepackage{amssymb,amsmath}
+\usepackage{booktabs,array,multirow,multicol,tabularx,ragged2e,xltabular}
+\usepackage{adjustbox}
+\usepackage[shortlabels,inline]{enumitem}
+\parindent0em
+\usepackage{geometry}
+\geometry{lmargin=2cm,bmargin=2cm,tmargin=2cm,rmargin=1cm}
+
+\usepackage[svgnames,dvipsnames]{xcolor}
+\usepackage[colorlinks,link color=NavyBlue,cite color=Crimson,url color=DodgerBlue]{hyperref}
+
+\addto\captionsindonesian{
+	\renewcommand{\bibname}
+	{Daftar Pustaka}
+}
+\renewcommand*{\thesection}{\Alph{section}.}
+\usepackage{titlesec}
+\titleformat{\chapter}%
+{\huge\bfseries} % format applied to label+text
+{\makebox[0pt][r]{\thechapter\enskip
+		\textcolor{blue}{\smash{\rule[-\dp\strutbox]{2.5pt}{\baselineskip}}}%
+}} % label
+{10pt} % horizontal separation between label and title body
+{} % before the title body
+[] % after the title body
+
+\titleformat{\section}%
+{\Large\bfseries} % format applied to label+text
+{\thesection\hspace{2mm}} % \makebox[0cm][r]{\thesection\hspace{20pt}} label
+{0pt} % horizontal separation between label and title body
+{} % before the title body
+[] % after the title body
+
+%\titlespacing{\subsection}{0pt}{2em}{0pt} 55 ke arah bawah
+%\titleformat*{\section}{\filcenter\Large\bfseries} %% peletakkan di tengah baris
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\sffamily\normalsize\bfseries #1}{}} % Chapter text font settings
+\renewcommand{\sectionmark}[1]{\markright{\sffamily\normalsize\thesection\hspace{5pt}#1}{}} % Section text font settings
+\fancyhf{} \fancyhead[LE,RO]{\sffamily\normalsize\thepage} % Font setting for the page number in the header
+\fancyhead[LO]{\rightmark} % Print the nearest section name on the left side of odd pages
+\fancyhead[RE]{\leftmark} % Print the current chapter name on the right side of even pages
+%\renewcommand{\headrulewidth}{0.5pt} % Width of the rule under the header
+\addtolength{\headheight}{2.5pt} % Increase the spacing around the header slightly
+\renewcommand{\footrulewidth}{0pt} % Removes the rule in the footer
+\fancypagestyle{plain}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}} % 
+
+%\pagestyle{fancy}
+%\fancy{}
+%\fancyhead[RO]{\footnotesize \itshape\rightmark\hfill\normalsize\thepage}
+%\fancyhead[LE]{\normalsize \thepage \hfill \footnotesize \itshape \leftmark }
+%\renewcommand{\headrulewidth}{.2pt}
+\usepackage{titlesec}
+\titleformat{\chapter}%
+{\huge\bfseries} % format applied to label+text
+{\makebox[0pt][r]{\thechapter\enskip
+		\textcolor{orange}{\smash{\rule[-\dp\strutbox]{2.5pt}{\baselineskip}}}%
+}} % label
+{10pt} % horizontal separation between label and title body
+{} % before the title body
+[] % after the title body
+
+\titleformat{\section}%
+{\Large\bfseries} % format applied to label+text
+{\thesection\hspace{2mm}} % \makebox[0cm][r]{\thesection\hspace{20pt}} label
+{0pt} % horizontal separation between label and title body
+{} % before the title body
+[] % after the title body
+
+%\titlespacing{\subsection}{0pt}{2em}{0pt} 55 ke arah bawah
+%\titleformat*{\section}{\filcenter\Large\bfseries} %% peletakkan di tengah baris
+
+\begin{document} %--------------------------------------------------awal dokumen
+
+\fontsize{9pt}{9pt}\linespread{1.5}\selectfont
+
+\maketitle
+\tableofcontents
+
+\cleardoublepage
+
+\chapter{INFORMASI UMUM}
+
+\section{Kompetensi Awal}
+
+{\color{NavyBlue}
+\begin{itemize}[\faCheckCircle,leftmargin=*,itemsep=-4pt,topsep=2pt]	
+\item 	Mengenal bilangan 
+\item 	Penggunaan garis bilangan
+\end{itemize}
+}
+
+\section{Profil Pelajar Pancasila}
+
+{\color{NavyBlue}
+\begin{itemize}[\faCheckCircle,leftmargin=*,itemsep=-4pt,topsep=2pt]
+\item Beriman \& Bertakwa terhadap Tuhan YME.
+\item Bernalar kritis.
+\item kreatif.
+\item Gotong royong.
+\item Mandiri.
+\end{itemize}
+}
+
+\section{Sarana dan Prasarana}
+
+{\color{NavyBlue}Ruang kelas, laptop dan proyektor dan printer.}
+
+\newpage
+\section{Target Peserta Didik}
+
+{\color{NavyBlue}Peserta didik yang menjadi target yaitu:
+\begin{itemize}[\faCheckSquare,leftmargin=*,itemsep=-4pt,topsep=2pt]
+\item Peserta didik \textbf{reguler/tipikal}: umum, tidak ada kesulitan dalam mencerna dan memahami materi
+ajar.
+\item Peserta didik dengan \textbf{kesulitan belajar}: memiliki gaya belajar yang terbatas hanya satu gaya, misalnya dengan audio; memiliki kesulitan dengan bahasa dan pemahaman materi ajar; kurang percaya diri;
+kesulitan berkonsentrasi jangka panjang; dsb.
+\end{itemize}}
+
+\section{Model Pembelajaran}
+
+{\color{NavyBlue} Model pembelajaran tatap muka.}
+
+\chapter{KOMPONEN INTI}
+
+\section{Tujuan Pembelajaran}
+
+{\color{NavyBlue}Dengan menggunkan model pembelajaran PBL siswa diharapkan dapat:
+\begin{itemize}[\faCheckCircle,leftmargin=*,itemsep=-4pt,topsep=2pt]
+	\item 	Memberikan contoh bilangan bulat dalam permasalahan kehidupan sehari-hari.
+	\item 	Menentukan Bilangan Bulat pada garis bilangan.
+	\item Membandingkan dan mengurutkan bilangan bulat.
+\end{itemize}}
+
+\section{Pemahaman Bermakna}
+
+{\color{NavyBlue}Dalam sebuah ruangan dipasang sebuah termometer suhu. Pada pengukuran suhu menggunakan termometer, untuk menyatakan suhu dibawah $0^\circ$C digunakan tanda negatif (-). Air mendidih pada suhu $100^\circ$C dan membeku pada suhu $0^\circ$C. Jika air berubah menjadi es, maka suhunya kurang dari $0^\circ$C.}
+
+\section{Pertanyaan Pemantik}
+
+{\color{NavyBlue}Suhu kota Bandung $21^\circ$C, sementara pada jam yang sama kota Jakarta suhunya lebih tinggi $10^\circ$C dari kota Bandung. Berapakah suhu di kota Tokyo jika lebih rendah $35^\circ$C dari kota Jakarta.}
+
+\section{Kegiatan Pembelajaran}
+\subsection*{Pendahuluan}
+{\color{NavyBlue}
+
+\begin{itemize}[\faCheckSquare,leftmargin=*,itemsep=-4pt,topsep=2pt]
+\item Siswa melakukan do’a sebelum belajar (meminta seorang peserta didik untuk memimpin do’a) 
+\item Guru mengecek kehadiran siswa dan meminta siswa untuk mempersiapkan perlengkapan dan peralatan yang diperlukan
+\item Siswa menerima informasi tentang pembelajaran yang akan dilaksanakan dengan materi yang memiliki keterkaitan dengan materi sebelumnya.
+\item Siswa menerima informasi tentang kompetensi, ruang lingkup materi, tujuan, manfaat, langkah pembelajaran, metode penilaian yang akan dilaksanakan 
+\item Guru bertanya (mencari informasi) tentang penerapan bilangan bulat dalam kehidupan sehari-hari dan siswa menjawab dengan prediksi masing-masing.
+\item Guru mengaitkan bilangan bulat yang diajarkan dengan kehidupan nyata.
+\end{itemize}	
+}	
+\subsection*{Kegiatan Inti}
+\subsubsection{Langkah 1: Klarifikasi Masalah}
+{\color{NavyBlue}
+\begin{itemize}[\faCheckSquare,leftmargin=*,itemsep=-4pt,topsep=2pt]	
+	\item Guru membagi siswa menjadi beberapa kelompok yang terdiri 4-5 orang.
+	\item Siswa memperhatikan dan mengamati penjelasan yang diberikan guru yang terkait dengan permasalahan yang melibatkan bilangan bulat serta penyajian garis bilangan pada bidang secara umum. 
+	\item Siswa dalam kelompok mengamati tayangan audiovisual misalkan tentang masalah-masalah yang penerapan konsep bilangan bulat serta penyajian garis bilangan.
+	\item Guru membagikan LK dan siswa membaca petunjuk, mengamati LK (LK berisi tentang permasalahan yang berhubungan dengan bilangan bulat serta penyajian garis bilangan.
+	\item Guru memotivasi siswa dalam kelompok untuk menuliskan dan menanyakan permasalahan hal-hal yang belum dipahami dari masalah yang disajikan dalam LK serta guru mempersilahkan siswa dalam kelompok lain untuk memberikan tanggapan, bila diperlukan guru memberikan bantuan komentar secara klasikal. 
+\end{itemize}	
+}
+\subsubsection{Langkah 2: Brainstorming}
+{\color{NavyBlue}
+	\begin{itemize}[\faCheckSquare,leftmargin=*,itemsep=-4pt,topsep=2pt]	
+		\item Siswa melakukan diskusi dalam kelompok masing-masing berdasarkan petunjuk yang ada dalam LK (misalkan: dalam LK berisikan permasalahan dan langkah-langkah pemecahan serta meminta siswa dalam kelompok untuk bekerja sama untuk menyelesaikan masalah berkaitan dengan bilangan bulat serta penyajian garis bilangan).
+		\item Siswa dalam kelompok melakukan brainstorming dengan cara sharing information, dan klarifikasi informasi tentang permasalahan yang terdapat tayangan video tentang “bilangan bulat”
+		la diperlukan guru memberikan bantuan komentar secara klasikal. 
+	\end{itemize}	
+}	
+\subsubsection{Langkah 3: Pengumpulan Informasi dan Data}
+{\color{NavyBlue}
+	\begin{itemize}[\faCheckSquare,leftmargin=*,itemsep=-4pt,topsep=2pt]	
+		\item Siswa masing-masing kelompok dalam kelompok juga membahas dan berdiskusi tentang permasalahan berdasarkan petunjuk LK untuk:
+		\begin{enumerate}[a.,leftmargin=*,itemsep=-4pt,topsep=2pt]
+		\item Mengidentifikasi bilangan bulat
+		\item Menjelaskan bilangan bulat.
+		\item Menentukan letak bilangan bulat positif, nol bilangan bulat negatif.
+		\item Menyajikan dalam bentuk garis bilangan.
+	\end{enumerate}
+		\item Siswa melakukan eksplorasi seperti dalam poin 8, dimana mereka juga diharapkan mengaitkan dengan kehidupan nyata 
+		\item Guru berkeliling mencermati siswa dalam kelompok dan menemukan berbagai kesulitan yang di alami siswa dan  memberikan kesempatan untuk mempertanyakan hal-hal yang belum dipahami.
+		\item Guru memberikan bantuan kepada siswa dalam kelompok untuk masalah-masalah yang dianggap sulit oleh siswa.
+		\item Guru mengarahkan siswa dalam kelompok untuk menyelesaikan permasahan dengan cermat dan teliti.	
+	\end{itemize}	
+}	
+\subsubsection{Langkah 3: Pengumpulan Informasi dan Data}
+{\color{NavyBlue}
+	\begin{itemize}[\faCheckSquare,leftmargin=*,itemsep=-4pt,topsep=2pt]	
+		\item Siswa masing-masing kelompok dalam kelompok juga membahas dan berdiskusi tentang permasalahan berdasarkan petunjuk LK untuk:
+		\begin{enumerate}[a.,leftmargin=*,itemsep=-4pt,topsep=2pt]
+			\item Mengidentifikasi bilangan bulat
+			\item Menjelaskan bilangan bulat.
+			\item Menentukan letak bilangan bulat positif, nol bilangan bulat negatif.
+			\item Menyajikan dalam bentuk garis bilangan.
+		\end{enumerate}
+		\item Siswa melakukan eksplorasi seperti dalam poin 8, dimana mereka juga diharapkan mengaitkan dengan kehidupan nyata 
+		\item Guru berkeliling mencermati siswa dalam kelompok dan menemukan berbagai kesulitan yang di alami siswa dan  memberikan kesempatan untuk mempertanyakan hal-hal yang belum dipahami.
+		\item Guru memberikan bantuan kepada siswa dalam kelompok untuk masalah-masalah yang dianggap sulit oleh siswa.
+		\item Guru mengarahkan siswa dalam kelompok untuk menyelesaikan permasahan dengan cermat dan teliti.	
+	\end{itemize}	
+}	
+\subsubsection{Langkah 4: Berbagi Informasi dan Berdiskusi untuk Menemukan Solusi Penyelesaian Masalah}
+{\color{NavyBlue}
+	\begin{itemize}[\faCheckSquare,leftmargin=*,itemsep=-4pt,topsep=2pt]	
+	\item Guru meminta siswa untuk mendiskusikan cara yang digunakan untuk menemukan semua kemungkinan pemecahan masalah terkait masalah yang diberikan.
+	\item Siswa dalam kelompok masing-masing dengan bimbingan guru untuk dapat mengaitkan, merumuskan, dan menyimpulkan tentang bilangan bulat serta penyajian garis bilangan. 
+	\item Siswa dalam kelompok menyusun laporan hasil diskusi penyelesaian masalah yang diberikan terkait bilangan bulat serta penyajian garis bilangan.	
+	\end{itemize}	
+}	
+\newpage
+\subsubsection{Langkah 5: Presentasi Hasil Penyelesaian Masalah}
+{\color{NavyBlue}
+	\begin{itemize}[\faCheckSquare,leftmargin=*,itemsep=-4pt,topsep=2pt]	
+		\item Beberapa perwakilan kelompok menyajikan secara tertulis dan lisan hasil pembelajaran atau apa yang telah dipelajari pada tingkat kelas atau tingkat kelompok mulai dari apa yang telah dipahami berkaitan dengan permasahan kehidupan sehari-hari berdasarkan hasil diskusi dan pengamatan.
+		\item Siswa yang lain dan guru memberikan tanggapan dan menganalisis hasil presentasi meliputi tanya jawab untuk mengkonfirmasi, memberikan tambahan informasi, melengkapi informasi ataupun tanggapan lainnya.	
+	\end{itemize}	
+}	
+\subsubsection{Langkah 6: Refleksi}
+{\color{NavyBlue}
+	\begin{itemize}[\faCheckSquare,leftmargin=*,itemsep=-4pt,topsep=2pt]	
+		\item Siswa melakukan refleksi, resume dan membuat kesimpulan secara lengkap, komprehensif dan dibantu guru dari materi yang yang telah dipelajari terkait bilangan bulat serta penyajian garis bilangan.
+		\item Guru memberikan apresiasi atas partisipasi semua siswa
+	\end{itemize}	
+}	
+\subsection*{Kegiatan Penutup}
+{\color{NavyBlue}
+\begin{itemize}[\faCheckSquare,leftmargin=*,itemsep=-4pt,topsep=2pt]	
+	\item Guru memberikan tugas mandiri sebagai pelatihan keterampilan dalam menyelesaikan masalah matematika yang berkaitan dengan bilangan bulat serta penyajian garis bilangan.
+	\item Melaksanakan postes terkait bilangan bulat serta penyajian garis bilangan.
+	\item Siswa mendengarkan arahan guru untuk materi pada pertemuan berikutnya.
+	\item	Untuk memberi penguatan materi yang telah dipelajari, guru memberikan arahan untuk mencari referensi terkait materi yang telah dipelajari baik melalui buku-buku di perpustakaan atau mencari di internet\\ \url{(https://www.aantriono.com)}.
+	\item	Guru memberikan tugas.	
+\end{itemize}
+}
+\subsection*{Refleksi Guru}
+{\color{NavyBlue}
+	\begin{itemize}[\faQuestionCircle,leftmargin=*,itemsep=-4pt,topsep=2pt]	
+	\item Apakah didalam kegiatan pembukaan siswa sudah dapat diarahkan dan siap untuk mengikuti pelajaran dengan baik?
+	\item Apakah dalam memberikan penjelasan teknis atau intruksi yang disampaikan dapat dipahami oleh siswa?
+	\item Bagaimana respon siswa terhadap sarana dan prasarana (media pembelajaran) serta alat dan bahan yang digunakan dalam pembelajaran mempermudah dalam memahami konsep bilangan?
+	\item Bagaimana tanggapan siswa terhadap materi atau bahan ajar yang disampaikan sesuai dengan yang diharapkan?
+	\item Bagaimana tanggapan siswa terhadap pengelolaan kelas dalam pembelajaran?
+	\item Bagaimana tanggapan siswa terhadap latihan dan penilaian yang telah dilakukan?
+	\item Apakah dalam kegiatan pembelajaran telah sesuai dengan alokasi waktu yang direncanakan?
+	\item Apakah dalam berjalannya proses pembelajaran sesuai dengan yang diharapkan?
+	\item Apakah 100\% siswa telah mencapai penguasaan sesuai tujuan pembelajaran yang ingin dicapai?
+	\item Apakah arahan dan penguatan materi yang telah dipelajari dapat dipahami oleh siswa?	
+	\end{itemize}
+}
+\subsection*{Refleksi Untuk Peserta Didik}
+{\color{NavyBlue}
+	\begin{itemize}[\faQuestionCircle,leftmargin=*,itemsep=-4pt,topsep=2pt]	
+		\item Pada bagian mana dari materi “Bilangan bulat” yang dirasa kurang dipahami?
+		\item Apa yang akan kamu lakukan untuk memperbaiki hasil belajar pada materi ini?
+		\item Kepada siapa kamu meminta bantuan untuk lebih memahami materi ini?
+		\item Berapa nilai yang akan kamu berikan terhadap usaha yang kamu lakukan untuk memperbaiki hasil belajarmu? (jika nilai yang diberikan dalam pemberian bintang 1- bintang 5)
+	\end{itemize}
+}
+\newpage
+\section{Penilaian (Asesmen)}
+
+{\color{NavyBlue}
+	\begin{center}
+		\large LEMBAR OBSERVASI KEGIATAN PEMBELAJARAN
+	\end{center}
+%\newpage
+	\begin{tabular}{p{4cm}p{.15cm}p{4cm}}
+		Nama Siswa&:& ....................\\
+		Kelas&:& ....................\\
+		Pertemuan Ke-&:& ....................\\
+		Hari/Tanggal Pelaksanaan&:& ....................\\
+\end{tabular}
+
+\vspace{.3cm}
+Berilah penilaian terhadap aspek pengamatan yang diamati dengan membubuh-\\kan tanda ceklis (\faCheck) pada berbagai nilai sesuai indikator.\\
+
+\begin{tabular}{|c|l|c|c|c|c|}
+\hline
+\multirow{3}{*}{No}&\multirow{3}{*}{Aspek Yang Diamati}&\multicolumn{4}{|c|}{Skor Penilaian}\\
+\cline{3-6}
+&&Kurang&Cukup&Baik&Sangat\\&&&&&Baik\\
+\cline{3-6}
+&&1&2&3&4\\
+\hline
+1&\textbf{Pendahuluan}&&&&\\
+\hline
+&Melakukan do’a sebelum belajar&&&&\\
+\hline
+&Mencermati penjelasan guru&&&&\\&berkaitan dengan materi&&&& \\&yang akan dibahas&&&& \\
+\hline
+2&\textbf{Kegiatan Inti}&&&&\\
+\hline
+&Keaktifan siswa dalam pembelajaran&&&&\\
+\hline
+&Kerjasama dalam diskusi kelompok&&&&\\
+\hline
+&Mengajukan pertanyaan&&&&\\
+\hline
+&Menyampaikan pendapat&&&&\\
+\hline
+&Menghargai pendapat orang lain&&&&\\
+\hline
+&Menggunakan alat peraga pembelajaran&&&&\\
+\hline
+3&\textbf{Penutup}&&&&\\
+\hline
+&Menyampaikan refleksi pembelajaran&&&&\\
+\hline
+&Mengerjakan latihan soal secara mandiri&&&&\\
+\hline
+&Memperhatikan arahan guru&&&&\\& berkaitan materi selanjutnya&&&&\\
+\hline
+\end{tabular}
+
+\vspace{2cm}
+	\textbf{Keterangan Penskoran:} \hspace{5cm} Padangratu, Juli 2021\\
+	Skor 1: Kurang \hfill Guru Matematika\\
+	Skor 2: Cukup  
+	Skor 3: Baik\\ 
+	Skor 4: Sangat baik 
+		\hfill	Aan Triono, S.Pd\\
+		\textcolor{white}{.}\hspace{6.73cm}	\hfill NIP. 198207052010011016
+		 
+%\end{tabular}
+
+\vspace{1cm}
+\begin{center}
+	REKAPITULASI PORTOFOLIO LEMBAR KERJA HASIL DISKUSI KELOMPOK
+\end{center}
+\begin{tabular}{p{4cm}p{.15cm}p{4cm}}
+	Kelas&:& ....................\\
+	Jumlah Pertemuan&:& ....................\\
+	Hari/Tanggal Pelaksanaan&:& ....................\\
+\end{tabular}
+%\vspace{.5cm}
+\centering
+\begin{xltabular}{\textwidth}{|p{1cm}|p{4cm}|p{4cm}|}
+	\hline
+	\multirow{2}{*}{No}&\multirow{2}{*}{Nama Kelompok}&{\hspace{1cm}Pertemuan}\\
+	\cline{3-3}
+	&&\\
+	\hline
+	1&Kelompok 1&\\& .........&\\&.........&\\&.........&\\&.........&\\
+	\hline
+	2&Kelompok 2&\\& .........&\\&.........&\\&.........&\\&.........&\\
+	\hline
+	3&Kelompok 3&\\& .........&\\&.........&\\&.........&\\&.........&\\
+	\hline
+	4&Kelompok 4&\\& .........&\\&.........&\\&.........&\\&.........&\\
+	\hline
+	5&Kelompok 5&\\& .........&\\&.........&\\&.........&\\&.........&\\
+	\hline
+	6&Kelompok 6&\\& .........&\\&.........&\\&.........&\\&.........&\\
+	\hline
+	7&Kelompok 7&\\& .........&\\&.........&\\&.........&\\&.........&\\
+	\hline
+	8&Kelompok 8&\\& .........&\\&.........&\\&.........&\\&.........&\\
+	\hline
+\end{xltabular}
+\begin{flushright}
+	Padangratu, Juli 2021\\
+	Guru Matematika\\
+	
+	\vspace{1.5cm}
+	Aan Triono, S.Pd\\
+	NIP. 198207052010011016
+\end{flushright}
+
+\newpage
+\begin{center}
+PENILAIAN TES TERTULIS	
+\end{center}
+	\begin{tabular}{p{4cm}p{.15cm}p{4cm}}
+	Nama Siswa&:& ....................\\
+	Kelas&:& ....................\\
+	Pertemuan Ke-&:& ....................\\
+	Hari/Tanggal Pelaksanaan&:& ....................\\
+\end{tabular}
+	\begin{enumerate}[1.]
+	\item Amir mendaki tebing yang tingginya $10$ m dari atas permukaan tanah. Ketika Amir berada puncak pendakian, ia melihat kebawah ternyata dibelakang tebing ada danau yang sangat indah. Kemudian ia bertanya kepada penduduk asli yang disana kedalam danau tersebut, dan ternyata kedalamnya sama dengan tinggi tebing. Coba kalian buatkan tinggi tebing dari permukaan tanah dengan kedalaman danau dalam garis bilangan yang sama. 
+	\item Hotel GUCI memiliki 20 lantai dengan baseman 5 lantai. Sinta bekerja sebagai resepsionis berada di loby lantai dasar. Pak Adi adalah Manager di Hotel GUCI, ia memiliki kantor di lantai 14. Pak Hendra bertugas menjadi supir Pak Adi, biasanya ia memparkirkan mobilnya di basement lantai 3. Coba kalian gambarkan posisi Pak Adi, Sinta dan Pak hendra dalam garis bilangan.
+	\item Pada pukul 07.00 diwaktu setempat suhu di kota Lembang sekitar 190C, setiap 5 jam suhu mengalami kenaikan sekitar 30C. Sekitar jam 17.00 berapa suhu di kota Lembang?
+	\item Suhu kota Bandung 210C, sementara pada jam yang sama kota Jakarta suhunya lebih tinggi 100C dari kota Bandung. Berapakah suhu di kota Malang jika lebih rendah 130C dari kota Jakarta.
+\end{enumerate}
+}
+\newpage
+\section{Pengayaan dan Perbaikan}
+
+{\color{magenta}
+\begin{table}[H]
+%	\caption{table}{ Daftar nama dan alamat siswa}
+	\centering
+	\begin{tabular}{@{}ll@{}}
+		\toprule
+		Pengayaan& Soal pengayaan atau untuk siswa yang nilai berpencapaian tinggi \\ 
+		&1.	Suhu dikota K adalah $-12^\circ$C. Suhu di kota L $15^\circ$C lebih tinggi\\& daripada suhu dikota K. Suhu di kota M $8^\circ$C lebih rendah\\& daripada suhu dikota N. Jika suhu dikota N adalah $16^\circ$C,\\ &tentukan selisih antara suhu dikota L dab suhu di kota M.\\
+		&2.	Sebuah balon gas berada $200$ meter di atas permukaan air laut\\& ditambatkan diatas gedung. Sebuah gedung bertingkat\\& $20$ dibangun diatas tanah $75$ meter diatas permukaan laut.\\& Seorang anak berada digedung tersebut di lantai $15$.\\& Seorang anak, gedung dan balon berada dalam satu garis vertikal.\\&
+		Jika setiap tingkat tinggi ruangan$ $4 meter, tentukan:\\&
+		a.	Jarak balon gas dengan puncak gedung.\\&
+		b.	Posisi anak diukur dari atas permukaan air laut.\\
+		\midrule
+		Remedial& Remedial dilakukan dengan pembelajaran ulang pada waktu\\& yang ditentukan.\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+}
+
+
+\chapter{LAMPIRAN}
+
+\section{Lembar Kerja Peserta Didik}
+
+{\color{NavyBlue}
+	\begin{center}
+{	\large	LEMBAR KERJA KELOMPOK\\[6pt]
+	
+		MATERI POKOK: BILANGAN BULAT}
+	\end{center}
+Nama Kelompok: $\cdots$\\
+Anggota kelompok:
+\begin{enumerate}[1.]
+	\item ............\\[-12pt]
+	\item ............\\[-12pt]
+	\item ............\\[-12pt]
+	\item ............\\[-12pt]
+\end{enumerate}
+\begin{enumerate}[A.,leftmargin=*,itemsep=-4pt,topsep=2pt]
+	\item Petunjuk Umum\\[-12pt]
+	\begin{itemize}[\faCheckSquare,leftmargin=*,itemsep=4pt,topsep=2pt]
+	\item Perhatikan penjelasan dari guru
+	\item Amati lembar kerja ini dengan seksama
+	\item Baca dan diskusikan dengan teman kelompokmu dan tanyakan kepada guru jika ada hal yang kurang dipahami.
+	\item Setiap kelompok akan mendapatkan alat dan bahan dalam mengerjakan LK ini.
+	\item Gunakan alat dan bahan tersebut untuk memahami bilangan bulat.
+\end{itemize}
+	\item Langkah-Langkah Kegiataan\\[-12pt]
+	\begin{itemize}[\faCheckSquare,leftmargin=*,itemsep=4pt,topsep=2pt]
+		\item Persiapkan alat dan bahan yang akan digunakan yaitu karton, penggaris, spidol dan dadu.
+		\item Buatlah kotak seperti gambar berikut pada sebuah karton.
+		\begin{center}
+		\includegraphics[width=10cm]{bil}	
+		\end{center}
+		%\begin{tikzpicture}
+		%\draw[help lines,step=1cm,very thick] (-1,-1)  grid (9,1);
+		%\draw[thick,red,-] (-1,0) -- (9,0);
+		%\end{tikzpicture}
+		\item Letakkan dadu diatas titik berwarna orange, lalu kalian tuliskan angka nol.
+		\item Geserkanlah dadu diatas kesebelah kanan, satu langkah tulis $+$. Tanda $+$ bisa tidak di tuliskan.
+		\item Kembali dadu ke lingkaran orange atau angka nol.
+		\item Geserkan dadu kesebelah kiri, satu langkah tulis $-1$.
+		\item Dari pergeseran dadu ke kiri dan kekanan didapat angka $1$ yang berbeda atau lawannya. Ke   kanan $+1$ dan ke kiri $-1$.
+		\item Coba kalian ulangi pergesaran dadu seperti cara nomor $3, 4, 5$ dan $6$ apabila kekanan atau kekiri dadunya.
+		\item Tuliskan hasil pergeseran dadu tadi kedalam karton yang kalian buat sesuai banyaknya langkah dalam bentuk bilangan.
+			\begin{center}
+			\includegraphics[width=10cm]{bil1}	
+		\end{center}
+		\item Gabungkan bilangan-bilangan yang diperoleh berdasarkan urutan dari gambar yang diperoleh di karton yang kalian buat \{ ...., ...., ...., ...., ...., ...., ...., ...., .... ,...., ....\}
+		\item Berdasarkan kegiatan diatas, maka diperoleh tiga macam bilangan yang terdiri dari:
+		\begin{enumerate}[a.]
+			\item ...
+			\item ...
+			\item ...
+		\end{enumerate}
+	\end{itemize}
+
+
+	\item Latihan\\[-10pt]
+		\begin{enumerate}[1.]
+		\item Budi berdiri di atas lantai berpetak, dia berdiri di satu titik dan dinamakan titik $0$. Garis pada petak di depan Budi diberi angka $1, 2, 3, ...$, dan garis yang berada di belakang Budi diberi angka $-1, -2, -3, ....$. Budi melangkah maju sebanyak $4$ langkah, kemudian ia mundur sebanyak $7$ langkah, kemudian maju $2$ langkah dan mundur $4$ langkah. Sekarang budi berada di angka berapa, pada garis lantai berpetak.
+		\item Diketahui suhu didalam ruangan laboratorium $18^\circ$C. Karena akan digunakan untuk sebuah penelitian, maka suhu diturunkan $25^\circ$C. Setelah $2$ jam suhu ruangan laboratorium harus dinaikkan lagi $13^\circ$C. berapakah suhu ruangan laboratorium sekarang?
+	\end{enumerate}
+\end{enumerate}
+}
+
+\section{Bahan Bacaan Guru dan Peserta Didik}
+
+{\color{blue}
+Bilangan bulat adalah bilangan bukan pecahan yang terdiri dari bilangan negatif, nol, dan bilangan positif. Notasi bilangan bulat adalah:\[\mathbb{Z}=\{\ldots,-3, -2, -1, 0, 1, 2, 3, \ldots \}\]
+Selengkapnya materi bilangan bulat dapat diakses di \url{https://www.aantriono.com/2021/07/bilangan-bulat.html}
+}
+
+\section{Glosarium}
+
+{\color{NavyBlue}\begin{itemize}[\faSearch,leftmargin=*,itemsep=-4pt,topsep=2pt]	
+		\item \textbf{Akar pangkat} adalah sifat operasi penjumlahan atau perkalian tiga bilangan dengan pengelompokkan.
+		\item \textbf{Bentuk baku} adalah penulisan dengan menggunakan notasi ilmiah.
+		\item \textbf{Bilangan berpangkat} bilangan yang dipangkatkan dengan bilangan lain, sehingga bernilai tertentu.	
+		\item \textbf{Bilangan Bulat} adalah bilangan yang terdiri atas bilangan positif, nol, dan bilangan negatif.
+		\item \textbf{Bilangan irasional} adalah bilangan yang tidak dapat dinyatakan dengan $\dfrac{a}{b}, \text{dan}\ b\neq 0$.
+		\item \textbf{Bilangan rasional} adalah bilangan yang dapat dinyatakan dengan $\dfrac{a}{b}, \text{dan}\ b\neq 0$.
+\end{itemize}
+}
+
+%\section{Daftar Pustaka}
+
+
+%Kementerian Pendidikan dan Kebudayaan.(2013). \textit{Matematika Kelas VII SMP/MTs: Buku Siswa}. Jakarta:
+%Puskurbuk.\\
+%Adinawan, M. C. \& Sugijono. {\emph Seribu Pena Matematika Jilid 1 untuk SMP
+%kelas VII}. Jakarta: Erlangga.
+%Aufmann, R. N., Lockwood, J. S., Nation,
+
+
+
+
+\begin{thebibliography}{99}
+{\color{NavyBlue}
+\bibitem{Hos14}
+Kementerian Pendidikan dan Kebudayaan. (2013). \emph {Matematika Kelas VII SMP/MTs: Buku Siswa}. Jakarta: Puskurbuk.
+\bibitem{aq}
+Adinawan, M. C. \& Sugijono. (2008). \emph {Seribu Pena Matematika Jilid 1 untuk SMP kelas VII}. Jakarta: Erlangga.
+\bibitem{aku} www.aantriono.com. Bilangan Bulat.
+\url{https://www.aantriono.com/2021/07/bilangan-bulat.html}.2021. Accessed on 2022-2-02.
+}
+\end{thebibliography}
+\addcontentsline{toc}{chapter}{Daftar Pustaka}
+
+\end{document}
